@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:82db55dbe1f836b4a0f4e0fdc1c468f3:577cbb3aa9319357326ab6d2c52cfa0e:f781355785f566d4645a5cf44580ff96$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="Data.png" width="128" height="128">
+    <sprite n="Black Hole.png" x="2" y="2" w="40" h="40" pX="0.5" pY="0.5"/>
+    <sprite n="Bullet.png" x="44" y="2" w="28" h="9" pX="0.5" pY="0.5"/>
+    <sprite n="Glow.png" x="75" y="2" w="35" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Laser.png" x="68" y="13" w="2" h="22" pX="0.5" pY="0.5" r="y"/>
+    <sprite n="Player.png" x="2" y="86" w="39" h="40" pX="0.5" pY="0.5" oX="0" oY="0" oW="40" oH="40"/>
+    <sprite n="Pointer.png" x="44" y="13" w="22" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="Seeker.png" x="43" y="86" w="30" h="40" pX="0.5" pY="0.5" oX="0" oY="5" oW="40" oH="40" r="y"/>
+    <sprite n="Wanderer.png" x="2" y="44" w="40" h="40" pX="0.5" pY="0.5"/>
+</TextureAtlas>

@@ -1,0 +1,11 @@
+#
+# Sprite sheet data for MonoGame.
+#
+# To learn how to import these sprites into your MonoGame project visit:
+# http://www.codeandweb.com/texturepacker/monogame
+#
+# Sprite sheet: Content.png (44 x 44)
+# $TexturePacker:SmartUpdate:4db67160ace91a4e3b6ec6c04f087182:579b8153697e168c0c95bfac529c5ed1:9a64b4e81de2af0c8b824c4008874009$
+#
+
+Wanderer;0;2;2;40;40;40;40;0.5;0.5
