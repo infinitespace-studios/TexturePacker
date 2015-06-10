@@ -1,0 +1,23 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Windows
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:../InfinitespaceStudios.TexturePacker.Pipeline/bin/Debug/InfinitespaceStudios.TexturePacker.Pipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Data.xml
+/importer:TexturePackerImporter
+/processor:TexturePackerProcessor
+/processorParam:TextureFormat=Compressed
+/processorParam:PremultiplyAlpha=False
+/build:Data.xml
+

@@ -5,12 +5,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinitespaceStudios.Textur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinitespaceStudios.TexturePacker", "InfinitespaceStudios.TexturePacker\InfinitespaceStudios.TexturePacker.csproj", "{972089E7-5FAB-43DF-B5E9-E5C06C997653}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinitespaceStudios.TexturePacker.Example", "InfinitespaceStudios.TexturePacker.Example\InfinitespaceStudios.TexturePacker.Example.csproj", "{6DB27451-C7E8-4B14-914D-C8EBD6657E9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DB27451-C7E8-4B14-914D-C8EBD6657E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB27451-C7E8-4B14-914D-C8EBD6657E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB27451-C7E8-4B14-914D-C8EBD6657E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB27451-C7E8-4B14-914D-C8EBD6657E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{972089E7-5FAB-43DF-B5E9-E5C06C997653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{972089E7-5FAB-43DF-B5E9-E5C06C997653}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{972089E7-5FAB-43DF-B5E9-E5C06C997653}.Release|Any CPU.ActiveCfg = Release|Any CPU

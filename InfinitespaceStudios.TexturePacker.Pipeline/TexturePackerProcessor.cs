@@ -21,10 +21,14 @@ namespace InfinitespaceStudios.TexturePacker.Pipeline
 		[DefaultValue(typeof(bool), "false")]
 		public virtual bool PremultiplyAlpha { get; set; }
 
+		[DefaultValue (typeof(string), "_Texture")]
+		public virtual string TextureSuffix { get; set; }
+
 		public TexturePackerProcessor ()
 		{
 			this.TextureFormat = TextureProcessorOutputFormat.Compressed;
 			this.PremultiplyAlpha = false;
+			this.TextureSuffix = "_Texture";
 		}
 
 		public override SpriteSheetData Process (XDocument input, ContentProcessorContext context)
@@ -35,18 +39,18 @@ namespace InfinitespaceStudios.TexturePacker.Pipeline
 
 			var result = new SpriteSheetData ();
 			var atlas = input.Element ("TextureAtlas");
-
 			var texture = atlas.Attribute ("imagePath").Value;
 			var e = new ExternalReference<TextureContent>(texture);
 			var textureReference = context.BuildAsset<TextureContent,TextureContent>(e, "TextureProcessor",
-				data,"TextureImporter",Path.GetFileNameWithoutExtension(texture)+"_Texture"); 
+				data,"TextureImporter",Path.GetFileNameWithoutExtension(texture)+TextureSuffix); 
 
 			result.Textures.Add (Path.GetFileNameWithoutExtension(texture),textureReference);
 
 			var sprites = atlas.Elements ("sprite");
 			foreach (var sprite in sprites) {
 				var frame = new SpriteSheetData.SpriteFrameData ();
-				frame.Name = sprite.Attribute ("n").Value;
+				var name = sprite.Attribute ("n").Value;
+				frame.Name = Path.GetFileNameWithoutExtension (name);
 				frame.SourceRectangle = new Rectangle(int.Parse (sprite.Attribute ("x").Value),
 					int.Parse (sprite.Attribute ("y").Value),
 					int.Parse (sprite.Attribute ("w").Value),
@@ -57,6 +61,7 @@ namespace InfinitespaceStudios.TexturePacker.Pipeline
 				var ow = sprite.Attribute ("oW") != null ? int.Parse(sprite.Attribute ("oW").Value) : frame.SourceRectangle.Width ;
 				var oh = sprite.Attribute ("oH") != null ? int.Parse(sprite.Attribute ("oH").Value) : frame.SourceRectangle.Height ;
 				frame.Size = new Vector2 (ow, oh);
+				result.Sprites.Add (frame);
 			}
 			return result;
 		}
